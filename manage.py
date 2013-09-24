@@ -3,7 +3,11 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.local")
+    #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.local")
+    if os.environ.get('HEROKU', '') == 'true' :
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.heroku")
+    else:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.local")
 
     from django.core.management import execute_from_command_line
 
