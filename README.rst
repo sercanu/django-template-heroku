@@ -9,8 +9,7 @@ and adapted to Heroku. There are a few changes listed below:
 #. base.py and other setting files are same with TwoScoops. heroku.py added.
 #. Repository and Project root directories are same to avoid extra settings.
 #. Heroku dependencies are added to heroku.txt. Heroku tutorial (https://devcenter.heroku.com/articles/getting-started-with-django) followed for adapting.
-#. If an  environment variable exists HEROKU=true, heroku.py will be used for settings.
-Otherwise default local settings will be used. If you want to add other options check manage.py and wsgi.py for settings.
+#. If an  environment variable exists HEROKU=true, heroku.py will be used for settings. Otherwise default local settings will be used. If you want to add other options check manage.py and wsgi.py for settings.
 
 Creating your project at local
 ==============================
