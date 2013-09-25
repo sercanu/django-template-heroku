@@ -43,7 +43,7 @@ django-template-heroku, run the following command::
     $ python manage.py runserver
     # Now you can visit the main page.
     # syncdb for admin page
-    $ python managa.py syncdb
+    $ python manage.py syncdb
     .....
     .....
     # After creating superuser account, you can login to /admin
