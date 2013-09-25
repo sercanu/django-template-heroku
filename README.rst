@@ -72,3 +72,22 @@ django-template-heroku, run the following command::
     .....
     # After creating superuser account, you can login to /admin
 
+
+Notes
+================================
+
+Secret Key for Security
+-----------------------
+
+Add SECRET_KEY parameter to heroku.py like production.py for security. After getting SECRET_KEY from environment you should add heroku config::
+
+    $ heroku config:add SECRET_KEY=...your secret key ...
+
+Site matching query does not exist error
+----------------------------------------
+
+Normally your site will have ID = 1 when creating it at first time. Default value of SITE_ID is 1 also at settings.
+But sometimes, for example when an error occurs while creating the superuser, site record may have not been created. This is the root of error. You can fix it like below:
+(http://stackoverflow.com/questions/11814059/site-matching-query-does-not-exist)
+
+
