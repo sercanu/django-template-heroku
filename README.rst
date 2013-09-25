@@ -59,7 +59,7 @@ django-template-heroku, run the following command::
     $ git add .
     $ git commit -m "initial commit"
     $ heroku create
-    $ heroku apps:rename your_project_name # This is optional
+    $ heroku apps:rename yourprojectname # This is optional
     $ heroku config:add HEROKU=true # This is must
     $ git push heroku master
     .....
